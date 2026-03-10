@@ -1,104 +1,77 @@
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
+![Status](https://img.shields.io/badge/status-POC-orange)
 # Duck Drive (Proof of Concept)
 
+En prototyp av en webbapplikation inspirerad av Google Drive. Projektet byggdes som ett grupparbete i Angular och fokuserade på att utforska komponentbaserad frontend-utveckling och användarinteraktion.
 
+Den nuvarande versionen demonstrerar layouten för en filhanterare samt en proof-of-concept implementation av drag-and-drop.
+![Duck Drive Layout](public/images/layout.png)
 
 
 ## Status
 
-Detta projekt är en Proof of Concept och innehåller endast delar av den planerade funktionaliteten. Fokus låg på att implementera layout och drag-and-drop interaktion.
+Detta projekt är en Proof of Concept och innehåller endast delar av den planerade funktionaliteten.
+
+Det som fungerar i nuläget:
+
+- Drag & Drop av filer till gränssnittet
+- Nedladdning av filerna
+- Radering av filer
+- Layout inspirerad av Google Drive
+
+
+## Teknologier
+
+- Angular
+
+- TypeScript
+
+- HTML
+
+- CSS
 
 ## Exempelbilder
 
-![Duck Drive output](public/images/image1.png)
+### Drag and Drop
+![Duck Drive Drag and Drop](public/images/droppedFiles.png)
+
+### Download
+![Duck Drive Download](public/images/download.png)
 
 
 
 
+## Min roll i projektet
+
+Detta projekt utvecklades som ett grupparbete. Mitt arbete fokuserade främst på:
+
+1. utveckling av Angular-komponenter
+
+2. arbete med layout och UI-struktur
+
+3. medverkan i implementationen av drag-and-drop funktionalitet
+
+Jag arbetade främst med användargränssnittet, medan en annan gruppmedlem hade 
+huvudansvar för den tekniska implementationen av drag-and-drop-logiken.
 
 
 
+## Köra projektet lokalt
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Angular1
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
-
-## Development server
-
-To start a local development server, run:
+Installera dependencies:
 
 ```bash
+npm install
+```
+
+Starta utvecklingsservern:
+```
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Öppna sedan:
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+http://localhost:4200
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
