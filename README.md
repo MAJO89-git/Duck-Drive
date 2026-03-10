@@ -1,3 +1,48 @@
+# Duck Drive (Proof of Concept)
+
+
+
+
+## Status
+
+Detta projekt är en Proof of Concept och innehåller endast delar av den planerade funktionaliteten. Fokus låg på att implementera layout och drag-and-drop interaktion.
+
+## Exempelbilder
+
+![Duck Drive output](public/images/image1.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Angular1
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
