@@ -1,0 +1,27 @@
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 500px;
+  background: #DFE9F5;
+}
+
+.search-icon {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.search-field input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  background: #DFE9F5;
+}
+input[_ngcontent-ng-c409859188] {
+width: 100%;
+width: 245%;
+}

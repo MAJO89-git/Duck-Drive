@@ -1,0 +1,64 @@
+<div
+  class="drop-zone"
+  (dragover)="onDragOver($event)"
+  (drop)="onDrop($event)"
+>
+  <!-- Tomt läge -->
+  <div class="drop-text" *ngIf="files.length === 0">
+    <p class="icon">📁</p>
+    <p class="title">Släpp filer här</p>
+    <p class="subtitle">eller dra dem från din dator</p>
+  </div>
+
+  <!-- Rubriker -->
+  <div class="file-header" *ngIf="files.length > 0">
+    <span class="file-icon"></span>
+    <span class="file-name">Namn</span>
+    <span class="file-size">Storlek</span>
+    <span class="file-date">Datum</span>
+    <span class="download-col">Ladda ner</span>
+    <span class="remove-btn">Ta bort</span>
+  </div>
+
+  <!-- Filer -->
+  <ul *ngIf="files.length > 0">
+
+
+  <li *ngFor="let item of files; let i = index" class="file-item">
+
+  <span class="file-icon">📄</span>
+
+  <span class="file-name">
+    {{ item.file.name }}
+  </span>
+
+  <span class="file-size">
+    {{ formatFileSize(item.file.size) }}
+  </span>
+
+  <span class="file-date">
+    {{ item.addedAt | date:'short' }}
+  </span>
+
+  <!-- Nedladdningsikon -->
+  <a
+    class="download-btn"
+    [href]="downloadFile(item.file)"
+    [download]="item.file.name"
+    aria-label="Ladda ner fil"
+  >
+  <mat-icon>download</mat-icon>
+  </a>
+
+  <!-- Ta bort -->
+  <button
+    class="remove-btn"
+    (click)="removeFile(i)"
+    aria-label="Ta bort fil"
+  >
+    <mat-icon>delete</mat-icon>
+  </button>
+
+</li>
+
+

@@ -1,0 +1,195 @@
+/* 
+   Tvinga Fil-kolumner i rätt ordning
+*/
+.file-name     { grid-column: 1; }
+.file-size     { grid-column: 2; }
+.file-date     { grid-column: 3; }
+.download-btn  { grid-column: 4; }
+.remove-btn    { grid-column: 5; }
+
+
+
+
+/* 
+   Root drop-zone, Startpunkten för drop-zone komponenten
+ */
+.drop-zone {
+  margin-top: 6%;
+  min-width: 700px;
+  min-height: 320px;
+  border-radius: 10px;
+  border: 2px dashed #aaaaaa28;
+  background-color: #e2e5e9;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  /* 
+  
+  Kontrollpanelen för kolumnbredder 
+  
+  */
+  --col-name: 1fr;
+  --col-size: 215px;
+  --col-date: 213px;
+  --col-download: 119px;
+  --col-remove: 115px;
+
+  --size-offset: 0px;
+  --date-offset: 0px;
+}
+
+.drop-zone:hover {
+  border: 2px double #fcf4cc8c;
+  background-color: #f8f8f8af;
+}
+
+.drop-zone:hover .file-header {
+  background-color: #f2f2f3;
+}
+
+/* 
+   Drop-text
+*/
+.drop-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 3rem;
+}
+
+.drop-text .icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.drop-zone p {
+  color: rgb(58, 58, 58);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* 
+   Reset lista
+ */
+.drop-zone ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* 
+   Header + fil-rader
+*/
+.file-header,
+.file-item {
+  display: grid;
+  grid-template-columns:
+    var(--col-name)
+    var(--col-size)
+    var(--col-date)
+    var(--col-download)
+    var(--col-remove);
+
+  align-items: center;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.file-header {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #555;
+  border-bottom: 2px solid #ccc;
+  background-color: #e4e9ee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.file-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.file-item:hover {
+  background-color: #ffffffe7;
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 2px 5px 5px rgba(54, 57, 58, 0.377);
+  
+}
+
+/* 
+   Fil-kolumner
+*/
+.file-icon {
+  font-size: 1rem;  
+  margin-right: 8px;
+  text-shadow: 0 1px 3px lab(0.55% 0 0 / 0.86);
+
+}
+
+
+.file-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  justify-self: center;
+  color: rgb(97, 97, 97);
+  font-size: 0.85rem;
+  transform: translateX(var(--size-offset));
+}
+
+.file-date {
+  justify-self: center;
+  color: #777;
+  transform: translateX(var(--date-offset));
+}
+
+/* 
+   Ikoner + knappar
+ */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f6368;
+  text-decoration: none;
+}
+
+.download-btn mat-icon {
+  font-size: 20px;
+}
+
+.download-btn:hover mat-icon {
+  color: #1a73e8;
+  transform: scale(1.1);
+  text-shadow: 0 1px 3px lab(64.32% 0.29 -53.85 / 0.86);
+
+}
+
+.remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.remove-btn:hover {
+  color: #c2042d;
+  transform: scale(1.1);
+  text-shadow: 0 1px 3px rgba(255, 33, 33, 0.86);
+}
